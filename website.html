@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SpaceX Explorer</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Dark background color */
+            color: #ffffff; /* Light text color */
+            overflow: hidden; /* Hide the default scrollbar */
+        }
+
+        header {
+            background-color: #111;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            margin-top: -10px;
+        
+        }
+
+        .spacer {
+            margin-right:30px;
+            margin-left:320px;
+            width: 520px; /* Adjust width as needed */
+        }
+
+        .spacer img {
+            max-width: 100%;
+            height:auto;
+            border-radius:0;
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+
+        .logo {
+            max-width: 100px;
+            margin-right: 15px;
+        }
+
+        .brand h1 {
+            font-size: 1.5em;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        .brand p {
+            font-size: 0.8em;
+            margin: 0;
+        }
+
+        .login {
+            background-color: #111;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+
+        .profile-icon {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            margin-left: 20px;
+            position: relative;
+            margin-top: -10px;
+        }
+
+        .profile-icon img {
+            width: 70px;
+            border-radius: 50%;
+        }
+
+        .profile-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1002;
+            display: none;
+        }
+
+        .profile-dropdown a {
+            color: #ffffff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .profile-dropdown a:hover {
+            background-color: #555;
+        }
+
+        .profile-icon:hover .profile-dropdown {
+            display: block;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            height: 100%;
+            width: 15%;
+            position: fixed;
+            top: 100px;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin-bottom: 15px;
+        }
+
+        /* Add the following styles to create a hover effect on navigation links */
+        .navbar nav a:hover {
+            background-color: #555;
+        }
+
+        /* Open links in a new page */
+        .navbar nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.2em;
+            display: block;
+            padding: 8px; /* Add padding for better spacing */
+        }
+
+        .text-container {
+            overflow-y: auto;
+            padding: 16px;
+            font-size: 1em;
+            margin-left: 15%;
+            height: 100vh;
+            box-sizing: border-box;
+            background: rgba(18, 18, 18, 0.7); /* Semi-transparent black background */
+        }
+
+        .text {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer {
+            background-color: #333; /* Matching the grey color of the navigation */
+            padding: 15px;
+            box-sizing: border-box;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: -10px;
+        }
+
+        .contact-info p,
+        .legal-info p {
+            margin: 0;
+            padding: 5px;
+            color: #fff; /* Text color for the footer */
+        }
+
+        .footer a {
+            color: #fff;
+            margin-right: 40px;
+            font-size: 1.5em;
+        }
+
+        /* New styles for the bottom center text */
+        .creator {
+            text-align: center;
+            margin-bottom: -12px;
+            padding: 0px;
+            font-size: 1.2em;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="title">
+            <!-- SpaceX logo and brand -->
+            <img src="https://github.com/naveen-astra/website-creation_priv/blob/main/xlogo2.jpeg?raw=true" alt="SpaceX Logo" class="logo">
+            <div class="brand">
+                <h1>SPACEX</h1>
+            </div>
+            <!-- Add the new spacer div with the image -->
+            <div class="spacer">
+                <img src="https://github.com/naveen-astra/website-creation_priv/blob/main/centre.jpg?raw=true" alt="Spacer Image">
+            </div>
+        </div>
+
+        <!-- Profile Icon and Dropdown -->
+        <div class="login">
+            <div class="profile-icon">
+                <img src="https://github.com/naveen-astra/website-creation_priv/blob/main/profile1.png?raw=true" alt="Profile Icon">
+                <div class="profile-dropdown">
+                    <a href="#">Login</a>
+                    <a href="#">Password</a>
+                    <a href="https://shop.spacex.com/">Shop</a>
+                    <a href="https://www.spacex.com/updates/">Updates</a>
+                    <a href="https://www.spacex.com/careers/">Careers</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="https://www.spacex.com/vehicles/falcon-9/" target="_blank">FALCON 9</a></li>
+                <li><a href="https://www.spacex.com/vehicles/falcon-heavy/" target="_blank">FALCON HEAVY</a></li>
+                <li><a href="https://www.spacex.com/vehicles/dragon/" target="_blank">DRAGON</a></li>
+                <li><a href="https://www.spacex.com/vehicles/starship/" target="_blank">STARSHIP</a></li>               
+                <li><a href="https://www.starlink.com/" target="_blank">STARLINK</a></li>
+                <li><a href="https://www.spacex.com/starshield/" target="_blank">STARSHIELD</a></li>
+                <li><a href="https://www.spacex.com/rideshare/" target="_blank">RIDESHARE</a></li>
+                <li><a href="https://www.spacex.com/mission/" target="_blank">MISSIONS</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="text-container">
+        <marquee><h1>MAKING LIFE MULTIPLANETARY</h1></marquee>
+        <img src="https://c4.wallpaperflare.com/wallpaper/307/44/955/spacex-rocket-spaceship-digital-art-wallpaper-preview.jpg" alt="Spacer Image" style="width: 100%; height: auto;">
+        <div class="text">
+            <p>“You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars.” -Elon Musk</p>
+        <img src="https://cdn.arstechnica.net/wp-content/uploads/2019/02/43895099105_0eaf6ef695_k-800x450.jpg" alt="Spacer Image" style="width: 100%; height: auto;">
+            <br>
+            <p>Building on the achievements of Falcon 9 and Falcon Heavy, SpaceX is working on a next generation of fully reusable launch vehicles that will be the most powerful ever built, capable of carrying humans to Mars and other destinations in the solar system.</p>
+            <img src="https://pbs.twimg.com/media/FYDmiaTUYAEAh6I?format=jpg&name=4096x4096" alt="Spacer Image" style="width: 100%; height: auto;">
+            <br>
+            <p>MAKING HISTORY</p>
+    SpaceX has gained worldwide attention for a series of historic milestones. It is the only private company capable of returning a spacecraft from low-Earth orbit, and in 2012 our Dragon spacecraft became the first commercial spacecraft to deliver cargo to and from the International Space Station. And in 2020, SpaceX became the first private company to take humans there as well. Click through the timeline above to see some of our milestone accomplishments.</p>
+            <img src=https://assets.newatlas.com/dims4/default/0fa9d1d/2147483647/strip/true/crop/1688x1125+308+0/resize/1200x800!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Ff3%2Fe1%2F41e61a0c4d468823070534adbb84%2Fdragon-carousel-0007-2.jpg style="width: 100%; height: auto;"> 
+            <br>
+            <p>LANDING</p>
+    SpaceX’s family of Falcon launch vehicles are the first and only orbital class rockets capable of reflight. Depending on the performance required for the mission, Falcon lands on one of our autonomous spaceport droneships out on the ocean or one of our landing zones near our launch pads.
+            <img src="https://www.spacex.com/static/images/infographics/F9_AUTONOMOUS_DRONESHIP_DESKTOP.jpg" alt="Spacer Image" style="width: 100%; height: auto;">
+            <br>
+            <p>REUSABILITY</p>
+    SpaceX believes a fully and rapidly reusable rocket is the pivotal breakthrough needed to substantially reduce the cost of space access. The majority of the launch cost comes from building the rocket, which historically has flown only once.
+            <img src="https://media.wired.com/photos/5a7cb68fa2d3835392e1b469/4:3/w_2133,h_1600,c_limit/spacexrocketreturn.jpg" alt="Spacer Image" style="width: 100%; height: auto;">
+
+    Compare that to a commercial airliner – each new plane costs about the same as Falcon 9 but can fly multiple times per day and conduct tens of thousands of flights over its lifetime. Following the commercial model, a rapidly reusable space launch vehicle could reduce the cost of traveling to space by a hundredfold.
+
+    While most rockets are designed to burn up on reentry, SpaceX rockets can not only withstand reentry but can also successfully land back on Earth and refly again.
+            <br>
+
+            <!-- Add more content here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="contact-info">
+            <p>SpaceX © 2024</p>
+            <p>Space Exploration and Technologies Corporation</p>
+            <p>1 Rocket Rd, Hawthorne, CA</p>
+        </div> 
+        <div class="creator">
+            <p>Creator</p>
+            <p>Babu</p>
+        </div> 
+        <div class="legal-info">
+            <!-- Other legal information -->
+            <p>Email: info@spacex.com</p>
+            <p>Website: www.spacex.com</p>
+            <!-- Font Awesome Icons with Links -->
+            <a href="https://twitter.com/SpaceX" target="_blank" class="s"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/spacex/?hl=en" target="_blank" class="s"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/spacex" target="_blank" class="s"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <!-- Any other scripts or closing tags -->
+</body>
+
+</html>
